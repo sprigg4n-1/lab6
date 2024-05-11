@@ -5,5 +5,5 @@ class Person {
 }
 
 class ProcessPerson {
-  public process(name: string, age: number, address: string): void {}
+  public process(person: Person): void {}
 }

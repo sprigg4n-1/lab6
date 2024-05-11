@@ -15,10 +15,10 @@ class Product {
   private price: number;
   private currency: Currency;
 
-  constructor(name: string, price: number, currency: string) {
+  constructor(name: string, price: number, currency: Currency) {
     this.name = name;
     this.price = price;
-    this.currency = new Currency(currency);
+    this.currency = currency;
   }
 
   public getName(): string {

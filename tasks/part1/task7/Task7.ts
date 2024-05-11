@@ -1,16 +1,14 @@
-class DateUtils {
-  public static isWeekend(date: Date): boolean {
+class Client {
+  public isWeekend(date: Date): boolean {
     const dayOfWeek = date.getDay();
 
-    return dayOfWeek === 7 || dayOfWeek === 0;
+    return dayOfWeek === 6 || dayOfWeek === 0;
   }
-}
 
-class Client {
   public doSomething(): void {
     const date = new Date();
 
-    if (DateUtils.isWeekend(date)) {
+    if (this.isWeekend(date)) {
       console.log(`It is weekend`);
     } else {
       console.log(`It is not weekend`);

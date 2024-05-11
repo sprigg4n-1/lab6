@@ -11,10 +11,6 @@ class Employee1 {
   private _name: string;
   private _department: Department1;
 
-  public getDepartmentManagerName(): string {
-    return this._department.getManagerName();
-  }
-
   public get name(): string {
     return this._name;
   }

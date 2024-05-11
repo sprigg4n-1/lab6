@@ -1,8 +1,7 @@
-class Vehicle {
-  protected brand: string;
+class Car {
   protected model: string;
 }
 
-class Car extends Vehicle {}
-
-class Truck extends Vehicle {}
+class Truck {
+  protected brand: string;
+}

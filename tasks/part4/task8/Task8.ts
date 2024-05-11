@@ -12,7 +12,6 @@ class Processor {
   }
 
   public process(a: number, b: number): number {
-    const res = this.calculator.add(a, b);
-    return res;
+    return this.calculator.add(a, b);
   }
 }

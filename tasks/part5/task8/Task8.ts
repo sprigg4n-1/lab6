@@ -1,4 +1,9 @@
-class Rectangle {
+interface Shape {
+  calculateArea(): number;
+  calculatePerimeter(): number;
+}
+
+class Rectangle implements Shape {
   private width: number;
   private height: number;
 
@@ -16,7 +21,7 @@ class Rectangle {
   }
 }
 
-class Square {
+class Square implements Shape {
   private side: number;
 
   constructor(side: number) {

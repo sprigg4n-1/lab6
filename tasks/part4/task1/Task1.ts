@@ -1,5 +1,5 @@
 class Calculator {
-  public calc(x: number, y: number): number {
+  public calculateSumOfTwoNumbers(x: number, y: number): number {
     return x + y;
   }
 }

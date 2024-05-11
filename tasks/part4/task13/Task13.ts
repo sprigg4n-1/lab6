@@ -1,19 +1,18 @@
 class Calculator {
   public static divide(a: number, b: number): number {
     if (b === 0) {
-      return -1;
+      throw new Error('Division by zero');
     }
 
     return a / b;
   }
 
   public static main(): void {
-    const res = this.divide(10, 0);
-
-    if (res === -1) {
-      console.log(`Error: division by zero`);
-    } else {
+    try {
+      const res = this.divide(10, 0);
       console.log(`Result: ${res}`);
+    } catch (error) {
+      console.log(`Error: ${error.message}`);
     }
   }
 }

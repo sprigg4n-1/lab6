@@ -2,14 +2,19 @@ class Library {
   private _books: Book[];
 
   constructor(books: Book[]) {
-    this.books = books;
+    this._books = books;
   }
 
-  public get books(): Book[] {
+  public get books(): ReadonlyArray<Book> {
     return this._books;
   }
-  public set books(value: Book[]) {
-    this._books = value;
+
+  public addBook(book: Book): void {
+    this._books.push(book);
+  }
+
+  public removeBook(book: Book): void {
+    this._books.splice(this._books.indexOf(book), 1);
   }
 }
 

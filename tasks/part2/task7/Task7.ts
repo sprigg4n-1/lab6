@@ -9,13 +9,21 @@ class Student {
 
   public enrollCourse(course: Course): void {
     this.courses.push(course);
+
+    course.addStudent(this);
   }
 }
 
 class Course {
   private title: string;
+  private students: Student[];
 
   constructor(title: string) {
     this.title = title;
+    this.students = [];
+  }
+
+  public addStudent(student: Student): void {
+    this.students.push(student);
   }
 }

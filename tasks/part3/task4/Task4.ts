@@ -1,16 +1,10 @@
-function searchElement(array: number[], targer: number): void {
-  let found: boolean = false;
-
+function searchElement(array: number[], target: number): void {
   for (let i: number = 0; i < array.length; i++) {
-    if (array[i] === targer) {
-      found = true;
-      break;
+    if (array[i] === target) {
+      console.log(`The number ${target} is in the array.`);
+      return;
     }
   }
 
-  if (found) {
-    console.log(`The number ${targer} is in the array.`);
-  } else {
-    console.log(`The number ${targer} is not in the array.`);
-  }
+  console.log(`The number ${target} is not in the array.`);
 }

@@ -1,13 +1,21 @@
 function checkAccess(user: User, resource: Resource): void {
-  if (user && resource && user.isLoggedIn()) {
-    if (user.hasPermission(resource)) {
-      console.log(`Access granted`);
-    } else {
-      console.log(`Access denied`);
-    }
+  if (isAccessAllowed(user, resource)) {
+    grantAccess();
   } else {
-    console.log(`Access denied`);
+    denyAccess();
   }
+}
+
+function isAccessAllowed(user: User, resource: Resource): boolean {
+  return user && resource && user.isLoggedIn() && user.hasPermission(resource);
+}
+
+function grantAccess(): void {
+  console.log(`Access granted`);
+}
+
+function denyAccess(): void {
+  console.log(`Access denied`);
 }
 
 class User {

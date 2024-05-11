@@ -12,6 +12,10 @@ class Employee {
 
   private department: Department;
 
+  public getManager(): Employee {
+    return this.department.getManager();
+  }
+
   public getDepartment(): Department {
     return this.department;
   }

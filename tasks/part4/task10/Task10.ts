@@ -6,8 +6,4 @@ class Person {
     this.name = name;
     this.age = age;
   }
-
-  public setAge(value: number): void {
-    this.age = value;
-  }
 }

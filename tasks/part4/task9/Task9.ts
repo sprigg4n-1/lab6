@@ -5,5 +5,5 @@ class User {
 }
 
 class UserManager {
-  public createUser(name: string, age: number, email: string): void {}
+  public createUser(user: User): void {}
 }

@@ -6,20 +6,14 @@ class Animal {
   }
 
   public eat(): void {
-    console.log(`The animal is eating.`);
+    console.log(`The ${this.species} is eating.`);
   }
 
   public sleep(): void {
-    console.log(`The animal is sleeping.`);
-  }
-}
-
-class Dog extends Animal {
-  constructor(species: string) {
-    super(species);
+    console.log(`The ${this.species} is sleeping.`);
   }
 
   public bark(): void {
-    console.log(`The dog is barking.`);
+    console.log(`The ${this.species} is barking.`);
   }
 }

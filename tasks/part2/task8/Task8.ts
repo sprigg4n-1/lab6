@@ -10,10 +10,8 @@ class Department {
 
 class Employee {
   private name: string;
-  private department: Department;
 
-  public constructor(name: string, department: Department) {
+  public constructor(name: string) {
     this.name = name;
-    this.department = department;
   }
 }

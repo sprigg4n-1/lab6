@@ -4,11 +4,9 @@ class Printer {
   }
 }
 
-class SecurePrinter {
-  private readonly printer: Printer = new Printer();
-
+class SecurePrinter extends Printer {
   printSecurely(document: string) {
     console.log(`Printing securely ${document}`);
-    this.printer.print(document);
+    this.print(document);
   }
 }

@@ -3,10 +3,7 @@ function proccessPayment(
   isMember: boolean,
   isDiscountAvailable: boolean
 ) {
-  if (amount > 100 && isMember) {
-    applyDiscount();
-  }
-  if (amount > 200 && isDiscountAvailable) {
+  if ((amount > 100 && isMember) || (amount > 200 && isDiscountAvailable)) {
     applyDiscount();
   }
 }
